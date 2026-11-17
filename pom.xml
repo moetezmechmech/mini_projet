@@ -5,8 +5,18 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.moetez</groupId>
-    <artifactId>moetez_spring_cloud</artifactId>
+    <artifactId>moetez</artifactId>
     <version>1.0-SNAPSHOT</version>
+    <packaging>pom</packaging>
+
+    <modules>
+        <module>eurekaserver</module>
+        <module>configserver</module>
+        <module>cours_microservice</module>
+        <module>formateur</module>
+        <module>gatewayserver</module>
+        <module>message</module>
+    </modules>
 
     <properties>
         <maven.compiler.source>21</maven.compiler.source>

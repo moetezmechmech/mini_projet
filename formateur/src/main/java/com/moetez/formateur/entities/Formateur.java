@@ -15,4 +15,7 @@ public class Formateur {
     private String nom;
     private String prenom;
     private String codeCours;
+    private String email;
+    private String mobileNumber;
+    private boolean communicationDone;
 }

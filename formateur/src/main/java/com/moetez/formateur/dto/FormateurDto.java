@@ -11,4 +11,7 @@ public class FormateurDto {
     private String prenom;
     private String codeCours;
     private String nomCours;
+    private String email;
+    private String mobileNumber;
+    private boolean communicationDone;
 }

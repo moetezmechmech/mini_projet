@@ -1,0 +1,9 @@
+spring:
+  config:
+    activate:
+      on-profile: "qa"
+build:
+  version: 3.0
+author:
+  name: "Moetez [Cours QA] Updated at 10:35 samedi"
+  email: "moetez_cours_QA@gmail.com"

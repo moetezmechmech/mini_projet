@@ -5,8 +5,7 @@ import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 
-//@FeignClient(url = "http://localhost:8082", name = "COURS")
-@FeignClient(name = "COURS")
+@FeignClient(name = "COURS", fallback = CoursFallBack.class)
 public interface APIClient {
 
     @GetMapping("api/cours/{cours-code}")

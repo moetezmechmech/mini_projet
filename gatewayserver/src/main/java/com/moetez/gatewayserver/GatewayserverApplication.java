@@ -11,9 +11,9 @@ public class GatewayserverApplication {
 
     public static void main(String[] args) {
         SpringApplication.run(GatewayserverApplication.class, args);
+    }
 
-
-   /* @Bean
+    @Bean
     public RouteLocator myRouteConfig(RouteLocatorBuilder routeLocatorBuilder) {
         return routeLocatorBuilder.routes()
                 .route(p -> p
@@ -21,7 +21,10 @@ public class GatewayserverApplication {
                         .uri("lb://COURS"))
                 .route(p -> p
                         .path("/api/formateurs/**")
+                        .filters(f -> f.circuitBreaker(config -> config
+                                .setName("formateurCircuitBreaker")
+                                .setFallbackUri("forward:/contactAdmin")))
                         .uri("lb://FORMATEUR"))
                 .build();
-    }*/
-}}
+    }
+}
